@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<body>
+    <ol>
+        <h1>
+            <li>
+            <b>Zewnętrzny</b> arkusz stylów
+            <table style="border-collapse: collapse;">
+            <tr>
+                <td>
+                    <textarea readonly cols="100px" rows="5px">
+<head>
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+</head>
+                    </textarea>
+                </td>
+            </tr>
+            </table>
+            </li>
+            <li>
+                Styl <b>lokalny</b> inaczej: (styl wpisany, liniowy, linijkowy, w linii) czyli dopisanie arkusza do wybranego bloku treści strony.
+                <table style="border-collapse: collapse;">
+                <tr>
+                    <td>
+                        <textarea readonly cols="100px" rows="5px">
+<selektor style="cecha1: wartość1; cecha2: wartość2...">...</selektor>
+                        </textarea>
+                    </td>
+                </tr>
+                </table>
+            </li>
+            <li> 
+                <b>Wewnętrzny</b> arkusz stylów.
+                <table style="border-collapse: collapse;">
+                <tr>
+                    <td>
+                        <textarea readonly cols="100px" rows="8px">
+<head>
+    <style type="text/css">
+    selektor1 { cecha: wartość; cecha2: wartość2... }
+    selektor2 { cecha: wartość; cecha2: wartość2... }
+    </style>
+</head>
+                        </textarea>
+                    </td>
+                </tr>
+                </table>
+                </li>
+                <li>
+                    <b>Alternatywny</b> arkusz stylów.
+                    <table style="border-collapse: collapse;">
+                    <tr>
+                        <td>
+                            <textarea readonly cols="100px" rows="7px">
+<head>
+    <link rel="Stylesheet" type="text/css" href="style.css" title="Nazwa domyślna" />
+    <link rel="Alternate stylesheet" type="text/css" href="style1.css" title="Nazwa 1" />
+    <link rel="Alternate stylesheet" type="text/css" href="style2.css" title="Nazwa 2" />
+</head>
+                            </textarea>
+                        </td>
+                    </tr>
+                    </table>
+                </li>
+                <li>
+                    <b>Import</b> arkusza stylów
+                    <table style="border-collapse: collapse;">
+                    <tr>
+                        <td>
+                            <textarea readonly cols="100px" rows="5px">
+<style type="text/css">
+ @import url(adres zewnętrznego arkusza stylów);
+</style>
+                            </textarea>
+                        </td>
+                    </tr>
+                    </table>
+                </li>
+        </h1>
+    </ol>
+</body>

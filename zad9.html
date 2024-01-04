@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<body>
+    <ol>
+        <h1><li>Gdzie wstawiany jest styl zewnętrzny, jaki znacznik jest za to odpowiedzialny oraz ile razy może on występować w dokumencie, jako podłączenie stylu CSS?</h1><br>Styl zewnętrzny w CSS jest podłączany za pomocą tagu link. Ten tag znajduje się w sekcji head dokumentu HTML.</li>
+        <h1><li>Jak jest najprostsza forma wstawiania stylu zewnętrznego otoczony ramką (może być tabela jedno komórkowa?)</h1>Najprostszą formą wstawienia stylu zewnętrznego otoczonego ramką może być użycie tabeli HTML z jedną komórką. Możesz osadzić element <link> w sekcji <head> Twojego dokumentu HTML, który odwołuje się do zewnętrznego pliku CSS, zawierającego odpowiednie style dla ramki. Następnie możesz umieścić zawartość, którą chcesz otoczyć ramką, w tej jednej komórce tabeli. To prosta metoda, ale pamiętaj, że używanie tabel do układania stron nie jest zalecane z punktu widzenia praktyk projektowych i responsywności. W przypadku bardziej zaawansowanych projektów, zaleca się stosowanie CSS Grid lub Flexbox do układania elementów na stronie.</li>
+        <h1><li>Ile arkuszy styli może być dołączanych do jednego dokumentu HTML oraz jaka zasad musi być zachowana przy większej ilości dołączanych styli?</h1>Priorytet ma arkusz stylów, który został podłączony później. Jeśli dwa arkusze styli definiują te same selektory i właściwości, to zostanie zastosowany arkusz stylów, który został dołączony później.</li>
+        <h1><li>Co się dzieje w przypadku konfliktów? Przez konflikt rozumiemy, gdy te same style są definiowane w różnych arkuszach styli podłączone do tego samego arkusza.</h1>Priorytet ma arkusz stylów, który został podłączony później. Jeśli dwa arkusze styli definiują te same selektory i właściwości, to zostanie zastosowany arkusz stylów, który został dołączony później.</li>
+        <h1><li>Jak są tworzone i edytowane pliki arkuszy z użyciem edytora tekstowego?</h1>Utwórz nowy plik tekstowy.
+            Zapisz ten plik z rozszerzeniem ".css". Na przykład, nazwij plik "style.css".</li>
+        <h1><li>Jak są tworzone i edytowane pliki arkuszy z użyciem specjalnego edytora CSS?</h1></li>
+        <h1><li>Jakie rozszerzenie posiadają plik będący zewnętrznym arkuszem styli?</h1>.css</li>
+        <h1><li>Jakie są zalety zewnętrznego arkusza styli( dwie – z użyciem wyliczenia?</h1>
+        <ol>
+            <li>Czytelność i utrzymanie</li>
+            <li>Zwiększona wydajność</li>
+            <li>Wsparcie dla wielu urządzeń</li>
+        </ol></li>
+        <h1><li>Uwagi na temat pisania w CSS</h1>
+            <u>Uwaga1</u><br/>
+            Język CSS dopuszcza stosowanie zarówno dużych, jak i małych liter.
+Poprawnymi nazwami atrybutu są background, backGROUND oraz BACKground.<br><br/>
+            <u>Uwaga2</u><br/>
+            Wstawienie białych znaków (spacje, tabulacje, znaki nowej linii) w arkuszu CSS nie ma
+wpływu na jego działanie. <br/>
+            <u>Uwaga3</u><br/>
+            Dlatego możesz ułożyć wpisywane reguły CSS w taki sposób, aby były bardziej czytelne np.<br/>
+            <table border=1 style="border-collapse:collapse; margin-top:4px;">
+                <tr>
+                    <td width="300px">h1 {<br/>
+                        font-weight : bold;<br/>
+                        }<br/>
+                       </td>
+                    <td width="300px">
+                        możemy zapisać 
+                    </td>
+                    <td width="300px">h1{font-weight:bold;}</td>
+                </tr>
+            </table>
+            <u>Uwaga4:</u>
+            <b>Komentarze w arkuszu stylów</b><br>
+            pisze się używając znaków: /* (otworzenie komentarza) oraz */ (zamknięcie komentarza),
+np.: /*to jest komentarz*/.
+Wszystko pomiędzy tymi znakami jest ignorowane przez przeglądarkę. <br>
+            <u>Uwaga5</u><br>
+            Część poleceń stylów CSS nie sa interpretowane przez niektóre przeglądarki internetowe lub
+jest obsługiwana odmiennie. Dlatego zawsze należy sprawdzać efekty w praktyce - jeśli to
+możliwe, to najlepiej w kilku najbardziej popularnych przeglądarkach: Microsoft Internet
+Explorer, Netscape/Mozilla/Firefox (czyli przeglądarki oparte na silniku Gecko), Opera. 
+        </li>
+    </ol>
+</body>
