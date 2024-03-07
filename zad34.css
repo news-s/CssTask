@@ -1,0 +1,8 @@
+h3{
+    width: 200pt;
+	height: 2cm;
+	margin-left: calc(100% - 200pt - 10px);
+	border: 4px double maroon;
+	background: rgb(255,105,180);
+    font-size: 16px;
+}

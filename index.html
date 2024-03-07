@@ -1,9 +1,45 @@
 <html>
 <head>
 <META HTTP-EQUIV="content-type" CONTENT="text/html" CHARSET="utf-8">
+    <style>
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes upndown{
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(180);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        @keyframes z{
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+        .box{
+            border-color: blueviolet; border-collapse: collapse;
+        }
+        .box2{
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-<table width=95% border="1" align="center" style="border-color: blueviolet; border-collapse: collapse;">
+<div class="box2">
+<table width=95% border="1" align="center" class="box">
 <tr>
 <td width=18% align=center>
 <h2>Linki do zadań:</h2>
@@ -35,6 +71,11 @@
 <a href="zad23.html" target="strony">Zadanie 23</a><br/>
 <a href="zad24.html" target="strony">Zadanie 24</a><br/>
 <a href="zad25.html" target="strony">Zadanie 25</a><br/>
+<a href="zad32.html" target="strony">Zadanie 32</a><br/>
+<a href="zad33.html" target="strony">Zadanie 33</a><br/>
+<a href="zad34.html" target="strony">Zadanie 34</a><br/>
+<a href="zad35.html" target="strony">Zadanie 35</a><br/>
+<a href="zad36.html" target="strony">Zadanie 36</a><br/>
 </td>
 <td align=center><iframe width=100% height=650 name="strony" src="start.html" border="0"></iframe>
 </td>
@@ -50,8 +91,24 @@
     <a href="zad20_kod.html" target="strony">Zadanie 20 kod</a><br/>
     <a href="zad22_kod.html" target="strony">Zadanie 22 kod</a><br/>
     <a href="zad23_kod.html" target="strony">Zadanie 23 kod</a><br/>
+    <a href="kod32.html" target="strony">Zadanie 34 kod</a><br/>
 </td>
 </tr>
 </table>
+</div>
+<!--<button onclick="start()">Start fun!</button>
+<button onclick="start2()">Start fun!</button>-->
+<script>
+    function start(){
+        var box = document.querySelector('.box');
+        box.style.animation = "rotate 1s infinite linear";
+    }
+</script>
+<script>
+    function start2(){
+        var box2 = document.querySelector('.box2');
+        box.style.animation = "upndown 1s ease-in infinite linear";
+    }
+</script>
 </body>
 </html>
