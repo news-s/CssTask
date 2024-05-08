@@ -1,0 +1,38 @@
+.pierwszy::first-letter{
+    font-size: 115pt;
+    color: orange;
+}
+.pierwszy{
+    color: gold;
+}
+.drugi::first-letter{
+    font-size: 115pt;
+    color: lightgreen;
+}
+.drugi{
+    color: gold;
+}
+.trzeci::first-letter{
+    font-size: 100pt;
+    color: red;
+}
+.trzeci{
+    color: blue;
+}
+.czwarty::first-letter{
+    font-size: 130pt;
+    color: lightgreen;
+}
+.czwarty{
+    font-weight: bold;
+    color: blue;
+}
+.piaty::first-letter{
+    font-size: 115pt;
+}
+.piaty::first-line{
+    color: red
+}
+.piaty{
+    color: blue;
+}

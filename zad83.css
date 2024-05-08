@@ -1,0 +1,20 @@
+p { 
+    width: 1000px;
+    margin-left: auto; /* wyśrodkowanie */
+    margin-right: auto; 
+    text-align: justify;
+    background-color: #00ffcc;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}

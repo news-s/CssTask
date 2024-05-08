@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td rowspan="2">
+                    Pozycjonowanie =>
+                </td>
+                <td>
+                    Pozycjonowanie pozwala zdefiniować położenie elementów na stronie internetowej.
+                    Elementy można rozmieszczać nie tylko względem brzegów strony, ale również względem jej
+                    poszczególnych elementów. Można rozmieszczac elementy tak, że jeden będzie przykrywał
+                    inny
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Ogólnie do pozycjonowania służy: <br />
+                    <div style="border: 1px solid black;">
+                        Do pozycjonowania służy atrybut position <br /> selektor{ position: rodzaj; parametry; }
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">
+                    1.
+                </td>
+                <td>
+                    Pozycjonowanie relatywne
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Można przesunąć wybrany element w stosunku do naturalnego pozycjonowania
+                    elementów. Można łączyć kierunki, czyli jednocześnie ustawić odległość od na
+                    przykład lewej i górnej krawędzi.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {position: relative; kierunek: wielkość;}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    np. selektor {position: relative; left: 10px; top: 10px;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    2.
+                </td>
+                <td>
+                    Pozycjonowanie absolutne
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dzięki temu poleceniu można przesunąć wybrany element w stosunku do wybranych
+                    krawędzi strony lub też nadrzędnego elementu tworzącego blok. Będzie to niezależne od
+                    innych elementów, a także od miejsca wpisania reguły w dokumencie.
+                    Należy zachować ostrożność, używając pozycjonowania absolutnego, ponieważ niekiedy
+                    może ono prowadzić do nieprzewidywalnych zachowań.
+                    Można łączyć kierunki, czyli jednocześnie ustawić odległość od na przykład lewej i górnej
+                    krawędzi.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {position: absolute; kierunek: wielkość;}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    np. selektor {position: absolute; left: 10px; top: 10px;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    3.
+                </td>
+                <td>
+                    Pozycjonowanie ustalone
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dzięki temu poleceniu można ustawić na stałe wybrany element w stosunku do krawędzi
+                    okna. Można łączyć kierunki, czyli jednocześnie ustawić odległość od na przykład lewej i
+                    górnej krawędzi.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {position: fixed; kierunek: wielkość;}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    np. selektor {position: fixed; left: 10px; top: 10px;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    4.
+                </td>
+                <td>
+                    Pozycjonowanie statyczne
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dzięki temu poleceniu można przywrócić naturalne pozycjonowanie elementów oparte na
+                    kolejności występowania w dokumencie HTML. Podanie jakiejkolwiek odległości nie ma
+                    żadnego wpływu na pozycję elementu
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {position: static;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    5.
+                </td>
+                <td>
+                    Kolejność nakładania (warstwy nakładające się)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <u>rodzaj:</u>
+                    <ul>
+                        <li>
+                            relative
+                        </li>
+                        <li>
+                            absolute
+                        </li>
+                        <li>
+                            fixed
+                        </li>
+                    </ul>
+
+                    <br />
+                    <u>kolejność:</u><br>
+                    liczba określającą kolejność, kolejność rośnie wraz z numeracją element z najmniejszą <br>
+                    liczbą będzie na samym spodzie <br>
+                    "auto" - przywraca naturalną kolejność
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dzięki temu poleceniu można ustalić kolejność nakładania się elementów. W normalnym <br>
+                    stanie elementy nakładają się w kolejności wpisywania do dokumentu HTML. Można to <br>
+                    zmienić wstawiając własną kolejność. <br>
+                    Kolejność nakładania dotyczy elementów pozycjonowanych.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {position: rodzaj; kierunek: wielkość; z-index: kolejność;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    6.
+                </td>
+                <td>
+                    Przycinanie elementu
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dzięki temu poleceniu można przyciąć element z czterech stron: od góry, prawej strony, od <br>
+                    dołu i od lewej strony. Możliwe jest to tylko przy position: absolute;. Przycięty fragment <br>
+                    może być tylko prostokątem. <br>
+                    współrzędne: punkty, od których element będzie przycięty, współrzędne liczone są od <br>
+                    lewego górnego rogu, podaje się je w odpowiedniej kolejności: góra – prawo (dwie liczby) <br>
+                    oraz dół - lewo(dwie liczby). <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Składnia reguły:
+                    selektor {position: absolute; clip: rect(wartości określają rogi prostokąta: górny-prawy i
+                    dolny-lewy.);}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    np. selektor {position: absolute; clip: rect(10px 100px 10px 10px);}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    7.
+                </td>
+                <td>
+                    Ułożenie w pionie
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Wyraz selektor ma zastosowanie do elementów wyświetlanych w linii lub do komórek w <br>
+                    tabeli. <br>
+                    sposób:
+                    <ul>
+                        <li>
+                            "baseline" - wyrównuje linię bazową elementu do linii bazowej elementu nadrzędnego
+                            (domyślnie)
+                        </li>
+                        <li>
+                            "middle" - ustawia element na środku wysokości elementów sąsiadujących
+                        </li>
+                        <li>
+                            "text-top" - wyrównuje szczyt elementu do szczytu tekstu elementu nadrzędnego
+                        </li>
+                        <li>
+                            "text-bottom" - wyrównuje podstawę elementu do podstawy tekstu elementu nadrzędnego
+                        </li>
+                        <li>
+                            "super" - tworzy indeks górny z elementu, ale nie zmienia wielkości tekstu
+                        </li>
+                        <li>
+                            "sub" - tworzy indeks dolny z elementu, ale nie zmienia wielkości tekstu
+                        </li>
+                        <li>
+
+                            "top" - wyrównuje szczyt elementu do szczytu najwyższego elementu linii, w której się
+                            znajduje
+                        </li>
+                        <li>
+                            "bottom" - wyrównuje podstawę elementu do podstawy elementu położonego najniżej w
+                            linii, w której się znajduje
+                        </li>
+                    </ul>
+
+
+
+
+
+                    wartość w jednostkach długości - przesunięcie ponad (wartości dodatnie) lub poniżej <br>
+                    (wartości ujemne) linii bazowej <br>
+                    wartość procentową - przesunięcie ponad (wartości dodatnie) lub poniżej (wartości <br>
+                    ujemne) linii bazowej względem wysokości linii <br>
+                    Dzięki temu poleceniu można ustalić pionowe wyrównanie elementów względem siebie.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {vertical-align: sposób;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    8.
+                </td>
+                <td>
+                    Ułożenie w poziomie
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    kierunek:
+                    <ul>
+                        <li>
+                            "left" - element ułożony na lewo od elementów sąsiadujących
+                        </li>
+                        <li>
+                            "right" - element ułożony na prawo od elementów sąsiadujących
+                        </li>
+                        <li>
+                            "none" - element bez elementów sąsiadujących
+                        </li>
+                    </ul>
+
+
+
+                    Dzięki temu poleceniu można ustalić poziome wyrównanie elementu w stosunku do <br>
+                    elementów sąsiadujących. Polecenie nie działa przy pozycjonowaniu absolutnym: position: <br>
+                    absolute;.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {float: kierunek;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    9.
+                </td>
+                <td>
+                    Przyleganie elementu
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Wyraz selektor ma zastosowanie do elementów wyświetlanych w bloku.
+                    miejsce: <br>
+                    <ul>
+                        <li>
+                            "left" - lewa krawędź elementu nie będzie stykała się z elementem pływającym
+                            poprzedzającym
+                        </li>
+                        <li>
+                            "right" - prawa krawędź elementu nie będzie stykała się z elementem pływającym
+                            poprzedzającym
+                        </li>
+                        <li>
+                            "both" - obie krawędzie elementu nie będą stykały się z elementem pływającym
+                            poprzedzającym
+                        </li>
+                        <li>
+                            "none" - bez zmian (domyślnie)
+                        </li>
+                    </ul>
+                    Dzięki temu poleceniu można ustalić położenie elementu następującego po elemencie <br>
+                    pływającym poprzedzającym. Polecenie definiuje, która krawędź nie będzie przylegać.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Składnia reguły:
+                    selektor {clear: miejsce;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    10.
+                </td>
+                <td>
+                    Sposób wyświetlania
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Wyraz selektor ma zastosowanie do wszystkich elementów . <br>
+                    sposób:
+                    <ul>
+                        <li>
+                            "block" - wyświetla jako element blokowy (domyślna)
+                        </li>
+                        <li>
+                            "inline" - wyświetla jako element liniowy
+                        </li>
+                        <li>
+                            "inline-block" - wyświetla jako element liniowy z wnętrzem blokowym
+                        </li>
+                        <li>
+                            "list-item" - wyświetla jako listę
+                        </li>
+                        <li>
+                            "none" - ukrywa element
+                        </li>
+                        <li>
+                            "compact" - wyświetla jako zagęszczony akapit bez odstępów
+                        </li>
+                        <li>
+                            "run-in" - wyświetla jako element liniowy, jeżeli następny jest element blokowy
+                        </li>
+                        <li>
+                            "marker" - wyświetla jako znak wykazu
+                        </li>
+                        <li>
+                            "table-header-group" - wyświetla jako nagłówek tabeli
+                        </li>
+                        <li>
+                            "table-footer-group" - wyświetla jako stopkę tabeli
+                        </li>
+                        <li>
+                            "table" - wyświetla jako tabelę
+                        </li>
+                        <li>
+                            "inline-table" - wyświetla jako tabelę
+                        </li>
+                        <li>
+                            "table-caption" - wyświetla jako podpis tabeli
+                        </li>
+                        <li>
+                            "table-cell" - wyświetla jako komórkę tabeli
+                        </li>
+                        <li>
+                            "table-row" - wyświetla jako rząd tabeli
+                        </li>
+                        <li>
+                            "table-row-group" - wyświetla jako grupę rzędów tabeli
+                        </li>
+                        <li>
+                            "table-column" - wyświetla jako kolumnę tabeli
+                        </li>
+                        <li>
+                            "table-column-group" - wyświetla jako grupę kolumn tabeli
+                        </li>
+                    </ul>
+
+                    Dzięki temu poleceniu można nadać określony sposób wyświetlania, inny niż naturalny. Na <br>
+                    przykład element wyświetlany w linii, może być wyświetlany w bloku i na odwrót
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {display: sposób;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    11.
+                </td>
+                <td>
+                    Widoczność elementu
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Wyraz selektor ma zastosowanie do wszystkich elementów . <br>
+                    stan: <br>
+                    <ul>
+                        <li>
+                            "visible" - element jest wyświetlany (domyślnie)
+                        </li>
+                        <li>
+                            "hidden" - element jest niewidoczny, ale zajmuje miejsce
+                        </li>
+                        <li>
+                            "collapse" - dotyczy tabel i jest nieobsługiwany przez Internet Explorera
+                        </li>
+                    </ul>
+                    Dzięki temu poleceniu można ukryć określony element, aby nie był wyświetlany w <br>
+                    przeglądarce. W jego miejscu pojawia się puste pudełko.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor {visibility: stan;}
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    12.
+                </td>
+                <td>
+                    kierunek
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            "left" - odległość od lewej krawędzi naturalnego pozycjonowania
+                        </li>
+                        <li>
+                            "top" - odległość od górnej krawędzi naturalnego pozycjonowania
+                        </li>
+                        <li>
+                            "right" - odległość od prawej krawędzi naturalnego pozycjonowania
+                        </li>
+                        <li>
+                            "bottom" - odległość od dolnej krawędzi naturalnego pozycjonowania
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    13.
+                </td>
+                <td>
+                    wielkości - długości miary
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            piksele - px
+                        </li>
+                        <li>
+                            punkty edytorskie - pt
+                        </li>
+                        <li>
+                            wysokość litery "x" - ex
+                        </li>
+                        <li>
+                            wysokość aktualnej czcionki - em
+                        </li>
+                        <li>
+                            centymetry lub milimetry - cm, mm
+                        </li>
+                        <li>
+                            części dziesiętne centymetra pisane z kropką np.: 0.5cm
+                        </li>
+                        <li>
+                            cale - in (1in=2.54cm)
+                        </li>
+                        <li>
+                            można podawać ujemne wielkości - przesunięcie będzie w przeciwną stronę
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    14.
+                </td>
+                <td>
+                    przezroczystosc
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    selektor { opacity: liczba od 0 do 1 } <br>
+                    0 => całkowita przezroczystość <br>
+                    1 => brak przezroczystości <br>
+
+                    Poziom przezroczystości jest nadawany wszystkim elementom objętym przez zdefiniowany <br>
+                    selektor.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

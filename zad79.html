@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona z powtarzanymi obrazami</title>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        
+        p#zero_perzynski {
+            width: 100%;
+            height: 75px;
+            background-color: #a9ceeb;
+            background-image: url('zad79.png');
+            background-repeat: repeat-x;
+            background-position: left;
+            font-size: 18pt;
+            font-family: 'Arial', sans-serif;
+            color: red;
+            text-align: center;
+        }
+        
+        p#jeden_perzynski {
+            width: 100%;
+            height: 200px;
+            background-color: lightsalmon;
+            background-image: url('zse.png');
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: 200px;
+            font-size: 64pt;
+            font-family: 'Arial', sans-serif;
+            color: blue;
+        }
+        
+        p#drugi_perzynski {
+            width: 100%;
+            height: 150px;
+            background-color: lightgreen;
+            background-image: url('zse.png');
+            background-repeat: no-repeat;
+            font-size: 25pt;
+            font-family: 'Arial', sans-serif;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <p id="zero_perzynski">
+            obraz powtarzany w kierunku poziomym obraz powtarzany w kierunku poziomym obraz powtarzany w kierunku poziomym
+        </p>
+        <p id="jeden_perzynski">
+            obraz w prawym
+            górnym rogu tła
+        </p>
+        <p id="drugi_perzynski">
+            obraz w dolnym lewym rogu obraz w dolnym lewym rogu <br />
+            obraz w dolnym lewym rogu obraz w dolnym lewym rogu <br />
+            obraz w dolnym lewym rogu obraz w dolnym lewym rogu
+        </p>
+</body>
+</html>
