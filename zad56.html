@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1><u>Klasy selektorów</u> (selektor klasy)</h1>
+        Składnia teoretyczna:
+        <table border="1">
+            <tr>
+                <td>
+                    selektor.klasa { cecha: wartość }
+                </td>
+            </tr>
+        </table>
+        <u>Selektorem</u> może być dowolny znacznik,
+        <ul>
+            <li>p – akapit</li>
+            <li>h1 – tytuł</li>
+            <li>div –blok</li>
+        </ul>
+        <b>Klasa</b> to wartość atrybutu class="..." nadanego selektorowi z poziomu języka (X)HTML.<br/>
+    <b>"cecha" oraz "wartość"</b> określają atrybuty elementu nadane poprzez style.<br/>
+    <u>Uwagi na temat nazwy klas</u>
+    <ul>
+        <li> Jako klasa należy podać dowolny pojedynczy wyraz, który nie może zawierać 
+            znaków: spacji, kropki, przecinka, dwukropka, pytajnika, nawiasów, znaku równości, 
+            plusa itp.</li>
+        <li> Może natomiast zawierać litery (A-Z, a-z), cyfry (0-9), myślniki ("-") i podkreślniki 
+                ("_"). Lepiej nie używać polskich liter. </li>
+        <li> Nie może się on również rozpoczynać cyfrą ani myślnikiem. </li>
+        <li> Jeśli koniecznie chcemy użyć "zakazanych" znaków, należy w deklaracji klasy 
+            poprzedzić je odwróconym ukośnikiem "\", np. reguła: selektor.B\&W\? { cecha: 
+            wartość } odpowiada klasie: class="B&W?"</li>
+    </ul>
+
+    <b>
+        <u>
+            Zastosowanie<br/>
+        </u>
+    </b>
+
+&nbsp;Deklaracja klasy jest przydatna szczególnie, jeśli na wielu stronach serwisu znajdują się <br/>
+elementy mające takie samo formatowanie, a dodatkowo nie można dla nich posłużyć się <br/>
+selektorem typu, ponieważ na stronie znajdują się inne znaczniki tego samego rodzaju co <br/>
+wybrany element, ale nie chcemy, aby i one otrzymały takie samo formatowanie. <br/>
+    </div>
+
+    <b>
+        <u>
+            Lista klas<br/>
+        </u>
+    </b>
+    Jeśli chcemy do pojedynczego elementu przypisać kilka różnych klas, należy posłużyć się 
+poleceniem:
+<table>
+    <tr>
+        <td>
+            < selektor class="klasa1 klasa2 klasa3...">...</ selektor>
+        </td>
+    </tr>
+</table>
+Uwagi:
+<ul>
+    <li>przy czym klasy: klasa1, klasa2, klasa3 muszą być zdeklarowane w wewnętrznym,<br/>
+        zewnętrznym lub importowanym arkuszu stylów.</li>
+    <li> Kolejność wpisywania nazw klas w wartości atrybutu class="..." nie ma znaczenia na<br/>
+        ostateczny sposób formatowania elementu. Jeżeli kilka przypisanych klas odnosi się<br/>
+        do tej samej własności, o wyniku decyduje zasada kaskadowości.</li>
+</ul>
+
+<b>
+    <u>
+        Podzbiory klas<br/>
+    </u>
+</b>
+
+Istnieje możliwość określenia tzw. podzbioru klas, czyli podania, jakie klasy musi mieć<br/>
+jednocześnie przypisane element, aby wybrana reguła CSS miała do niego zastosowanie. Na<br/>
+przykład po wpisaniu:
+
+<table>
+    <tr>
+        <td>
+            selektor.klasa1.klasa3 { cecha: wartość }
+        </td>
+    </tr>
+</table>
+zmieniony zostanie sposób formatowania elementu:
+<table>
+    <tr>
+        <td>
+            < selektor class="klasa1 klasa2 klasa3">...</ selektor>
+        </td>
+    </tr>
+</table>
+Kolejność podawania klas - zarówno w regule CSS, jak i w wartości atrybutu class="..." - nie
+ma znaczenia.
+
+<b>Uwagi do stosowania klas</b>
+<ul>
+    <li>Jeśli jakiś element, o specyficznym rodzaju formatowania, wstępuje przynajmniej raz
+        na niektórych stronach Twojego serwisu (może to być np. główny tytuł strony), jest to
+        znak, że dobrze byłoby umieścić w zewnętrznym arkuszu stylów deklarację jego
+        klasy. Dzięki temu, jeśli później zdecydujemy się zmienić jego formatowanie, nie
+        będziemy musieli modyfikować każdej ze stron, a jedynie zewnętrzny arkusz.</li>
+        <li>Już na początkowym etapie projektowania serwisu, dobrze jest dokładnie obmyślić,
+            jakie klasy mogą okazać się użyteczne. Im więcej deklaracji klas - odnoszących się do
+            powtarzalnych elementów - umieścisz w zewnętrznym arkuszu stylów, tym szybciej
+            przebiegnie późniejsza ewentualna modyfikacja stron!
+            </li>
+            <li>Dobrym pomysłem jest również wstawianie komentarza przed każdą deklaracją klasy
+                w arkuszu (znaki: /* ... */), w którym opisuje się jej przeznaczenie. Po jakimś czasie w
+                Twoim arkuszu stylów może znaleźć się tyle klas, że zapomnisz, do jakich elementów
+                się one odnosiły. Wtedy właśnie bardzo przydatny może się okazać wpisany wcześniej
+                komentarz.</li>
+</ul>
+
+<b>Przykład definiowania i wywołania klasy:</b><br>
+<u>definicja arkusza styli</u><br/>
+p.przyklad_klasa { color: red }<br/>
+<u>wywołanie</u><br/>
+< p class="przyklad_klasa">To jest akapit.</ p><br/><br/><br/><br/>
+<h1><b><u>Rodzaje klas w zależności od uniwersalności.</u></b></h1>
+<b><u>1)Klasa donosząca się tylko do jednego selektora</u></b>
+Podobnie jak w przypadku identyfikatora, tak zdefiniowana klasa może zostać użyta tylko w
+tym selektorze, do którego została przypisana, np.:
+
+<u>definicja arkusza styli</u>
+p.moja
+{
+color:green;
+font-size:14pt;
+}
+<u>wywołanie</u>
+Powinna zostać wywołana w znaczniku < p>< /p> w następujący sposób:
+< p class=”moja”>Treść akapitu< /p>
+
+2)Klasa uniwersalna
+W przypadku stosowanie klas, często podczas ich definiowania, nie wiemy jeszcze, w
+stosunku do jakich znaczników będziemy chcieli je później użyć. Wtedy przydatny okazuje
+się selektor uniwersalny, który pozwala przypisać własności klasy do wszystkich elementów,
+którym zostanie ona nadana, bez względu na typ znacznika czyli użycie jest możliwe w
+różnych znacznikach.
+</body>
+</html>

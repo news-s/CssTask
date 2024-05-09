@@ -1,0 +1,30 @@
+body{
+    background-color: silver;
+}
+p{
+    padding: 5px;
+    font-size:11pt;
+}
+p:first-child{
+    font-size:7mm; font-style:italic;
+}
+div#pierwszy_wohlfahrt{
+    width: 808px;
+    margin: auto;
+    background-color: lightblue;
+    border-radius: 12mm;
+    border: darkblue solid 5px;
+}
+div#drugi_wohlfahrt{
+    width: 1008px;
+    background-color: pink;
+    border-radius: 18mm;
+    border: black solid 3px;
+}
+div#trzeci_wohlfahrt{
+    width: 1208px;
+    margin: auto;
+    background-color: lightgreen;
+    border-radius: 12mm;
+    border: violet solid 7px;;
+}

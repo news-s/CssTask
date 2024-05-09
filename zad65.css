@@ -1,0 +1,30 @@
+body{
+    background-color: silver;
+}
+p{
+    padding: 5px;
+    font-size:11pt;
+}
+p:first-child{
+    font-size:7mm; font-style:italic;
+}
+div#j{
+    width: 808px;
+    margin: auto;
+    background-color: lightblue;
+    border-radius: 13px;
+    border: darkblue solid 5px;
+}
+div#d{
+    width: 1008px;
+    background-color: pink;
+    border-radius: 20px;
+    border: black solid 3px;
+}
+div#t{
+    width: 1208px;
+    margin: auto;
+    background-color: lightgreen;
+    border-radius: 13px;
+    border: violet solid 7px;;
+}
