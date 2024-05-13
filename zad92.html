@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <style type="text/css">
+      /* początek def CSS */
+      * {
+         margin: 0px;
+         padding: 0px;
+      }
+
+      /* zerowanie styli */
+      div {
+         overflow: hidden;
+         padding: 25px;
+      }
+
+      /* overflow: hidden --> ukrywanie tekstu wychodzącego poza granice elementu */
+      /* padding: 25px; --> zmiana położenia zawartości*/
+      #ramka {
+         /* definicja elementu ID o nazwie ramka*/
+         margin-right: auto;
+         /* auto --> wyrównywanie tekstu */
+         margin-left: auto;
+         min-width: 400px;
+         /* minimalna szer strony-->400 */
+         max-width: 900px;
+         /* maksymalna szer strony-->900 */
+      }
+
+      #naglowek {
+         background-color: rgb(48, 48, 48);
+         /* kolor tła w HEX na #FCF; */
+         font-size: 16pt;
+         /* wielkość czcionki na 16 na jaka tu jest jednostka-wpisz */
+         color: red;
+         /* kolor czcionki czerwony */
+         font-family: Arial;
+         /* zmiana fonta czcionki na arial */
+         font-style: italic;
+         /* zmiana fonta czcionki na italic */
+         text-align: center;
+         /* wyśrodkowanie tekstu */
+         font-weight: bold;
+         /* ????????????? */
+      }
+
+      #stopka {
+         background-color: #383838;
+         font-size: 16pt;
+         color: blue;
+         font-family: Arial;
+         font-style: italic;
+         clear: both;
+         /* clear-przyleganie elementów, both-?????????????? */
+      }
+
+      .kolumny {
+         /*definicja elementu ???? (jest kropka i co to znaczy)*/
+         margin-top: 10px;
+         /* przesunięcie elementu w górę o 10px */
+         /* ????????????? */
+         margin-right: 2%;
+         /* przesunięcie elementu w prawo o 2% */
+         /* ????????????? */
+         margin-bottom: 2%;
+         /* przesunięcie elementu w dół o 2% */
+         /* ????????????? */
+         margin-left: 10px;
+         /* przesunięcie elementu w lewo o 10px */
+         /* ????????????? */
+         background-color: #757575;
+      }
+
+      #kol1 {
+         float: left;
+         /* ?????????????? */
+         width: 100px;
+      }
+
+      #kol2 {
+         font-size: 0.7cm;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="ramka">
+      <div id="naglowek">Nagłówek mojej strony </div>
+      <div class="kolumny" id="kol1">
+         <p>Menu</p>
+      </div>
+      <div class="kolumny" id="kol2">
+         <p>
+            Szablon pływający (płynny szablon)<br>
+            Przy zmianie szerokości okna przeglądarki zmieniać się będzie szerokość kolumn.<Br>
+            Najczęściej zmiana szerokości dotyczy tylko wybranych kolumn np. kolumna menu<Br>
+            pozostaje niezmieniona, pozostałe kolumny zmieniaja się płynnie w stosunku do <br>
+            szerokości okna.<br>
+            <img width="300px" height='300px' src="zad92.png">
+            <img width="300px" height='300px' src="zad92_2.png">
+         </p>
+      </div>
+      <div id="stopka">Pracę wykonał nieznany woluntariusz</div>
+   </div>
+</body>
+
+</html>
