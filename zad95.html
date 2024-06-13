@@ -1,0 +1,113 @@
+
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="Description" content=" Opis strony ">
+    <meta name="Keywords" content=" , strona">
+    <meta name="Author" content=" ">
+    <meta name="Generator" content="notatnik">
+    <title>menu pionowe czynność pierwsza</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        ul {
+            list-style: none;
+            margin: 5px;
+            padding: 0px;
+            display: block;
+            width: 150px;
+        }
+        
+        ul li {
+            display: block;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        ul a:link,
+        ul a:visited {
+            display: block;
+            color: #005500;
+            text-decoration: none;
+            border: 2px outset #cccccc;
+            padding: 5px;
+            width: 120px;
+        }
+        
+        ul a:hover {
+            color: #ff00ff;
+            text-decoration: none;
+            border-style: inset;
+            padding: 7px 3px 3px 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Menu pionowe - krok pierwszy</h1>
+    <ul>
+        <li><a href="link1_perz1.html">Pierwszy link</a></li>
+        <li><a href="link2_perz2.html">Drugi link</a></li>
+        <li><a href="link3_perz3.html">Trzeci link</a></li>
+        <li><a href="link4_perz4.html">Czwarty link</a></li>
+        <li><a href="link5_perz5.html">Piaty link</a></li>
+    </ul>
+    <p style="border: 1px solid black;">ul → (definiuje selektor listy niesortowanej) <br />
+        { <br />
+        list-style: none; → (usuwa punktowanie) <br />
+        margin: 5px; →(odstęp poza borderem 5px w każdą strone) <br />
+        padding: 0px; →(zeruje odstęp w środku) <br />
+        } <br />
+        ul a:link, →(selektor dla linków) <br />
+        ul a:visited →(selektor dla odwiedzonych strpn) <br />
+        { <br />
+        display: block;→ element będzie wyświetlony w bloku (odstęp z góry i <br />
+        z dołu) <br />
+        color: #005500; → (ustawia kolor tekstu) <br />
+        text-decoration: none;→ (usuwa wszelkie dekoracje tekstu) <br />
+        } <br />
+        ul a:hover → (definiuje tylko dla na najechane) <br />
+        { <br />
+        color: #ff00ff; <br />
+        text-decoration: underline; →(dodaje linie pod tekstem) <br />
+        }
+    </p>
+    <p style="border: 1px solid black;">
+        ul 
+        { <br />
+   list-style: none;  <br />
+         margin: 5px;  <br />
+         padding: 0px;  <br />
+         display: block;  → ustawia wyświetlanie na blok (zajmuje całą szerokość) <br />
+         width: 150px; → ustawia szerokość na 150px <br />
+        }  <br />
+       ul li     → tylko dla elementów listy <br />
+        {  <br />
+   display: block; → ustawia wyświetlanie na blok (zajmuje całą szerokość) <br />
+         list-style: none; → usuwa wyświetlanie stylu listy (punktowania) <br />
+         margin: 0px;   → usuwa przerwy między elementami <br />
+         padding: 0px; → usuwa przerwy wewnętrzne między elementamni <br />
+        }  <br /> 
+       ul a:link, ul a:visited <br />
+        {   <br />
+        display: block; <br />
+         color: #005500;  <br />
+         text-decoration: none;  <br />
+         border: 2px outset #cccccc;  → ustawia border o szerokosci 2 px <br />
+         padding: 5px;   → ustawia przerwe wewnetrzna na px <br />
+         width: 120px;   → ustawia szerokosc na 120px <br />
+        } <br />
+       ul a:hover <br />
+        {  <br />
+   color: #ff00ff;  <br />
+         text-decoration: none; → usuwa dekoracje tekstu (ustawia na none) <br />
+         border-style: inset;  → ustawia styl borderu na inset <br />
+         padding: 7px 3px 3px 7px; → góra i zgodnie ze wskazówkami zegra.  <br />
+        } <br />
+    </p>
+</body>
+
+</html>
